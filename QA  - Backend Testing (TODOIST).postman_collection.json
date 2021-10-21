@@ -273,9 +273,13 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"",
+									"const projectName = pm.environment.get('newProjectName');",
 									"postman.setEnvironmentVariable(\"ProjectId\",jsonData.id);",
-									"pm.environment.unset(\"newProjectName\");",
+									"",
+									"",
+									"pm.test('Validate Name of the Project', () => {",
+									"    pm.expect(jsonData.name).to.eql(projectName);",
+									"});",
 									"",
 									"",
 									"",
@@ -396,8 +400,6 @@
 									"pm.test(\"Status code is 200\", () => {",
 									"  pm.expect(pm.response.code).to.eql(200);",
 									"});",
-									"",
-									"",
 									"",
 									"pm.test(\"Verify the project ID is correct\", function () {",
 									"    var expectedProjectId = parseFloat(pm.environment.get('ProjectId'))",
@@ -620,6 +622,8 @@
 									"  pm.expect(pm.response.code).to.eql(204);",
 									"});",
 									"",
+									"pm.environment.unset(\"newProjectName\");",
+									"pm.environment.unset(\"newProjectUpdatedName\");",
 									""
 								],
 								"type": "text/javascript"
@@ -835,9 +839,11 @@
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"postman.setEnvironmentVariable(\"taskId\",jsonData.id)",
-									"pm.environment.unset(\"newTaskName\");",
+									"const projectTask = pm.environment.get('newTaskName');",
 									"",
-									"",
+									"pm.test('Validate Name of the Task', () => {",
+									"    pm.expect(jsonData.content).to.eql(projectTask);",
+									"});",
 									"",
 									"pm.test(\"Status code is 200\", () => {",
 									"  pm.expect(pm.response.code).to.eql(200);",
@@ -1238,7 +1244,10 @@
 									"  pm.expect(pm.response.code).to.eql(204);",
 									"});",
 									"",
-									""
+									"",
+									"",
+									"pm.environment.unset(\"newTaskName\");",
+									"pm.environment.unset(\"newTaskUpdatedName\");"
 								],
 								"type": "text/javascript"
 							}
