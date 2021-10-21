@@ -1,0 +1,23 @@
+{
+  "name": "apitesting_todoist",
+  "version": "1.0.0",
+  "description": "Api testing with postman for TODOIST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api:tests": "newman run ./apitest/QABackendTesting_TODOIST.postman_collection.json -e ./apitest/TodoistEnvironment.postman_environment.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenciso/apitesting_todoist.git"
+  },
+  "author": "Jose Enciso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenciso/apitesting_todoist/issues"
+  },
+  "homepage": "https://github.com/wenciso/apitesting_todoist#readme",
+  "dependencies": {
+    "newman": "^5.3.0"
+  }
+}
