@@ -4,7 +4,7 @@
   "description": "Api testing with postman for TODOIST",
   "main": "index.js",
   "scripts": {
-    "api:tests": "newman run ./apitest/QABackendTesting_TODOIST.postman_collection.json -e ./apitest/TodoistEnvironment.postman_environment.json"
+    "api-tests": "newman run ./apitest/QABackendTesting_TODOIST.postman_collection.json -e ./apitest/TodoistEnvironment.postman_environment.json"
   },
   "repository": {
     "type": "git",

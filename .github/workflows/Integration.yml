@@ -3,11 +3,11 @@ name: Integration
 on: [pull_request]
 
 jobs:
-  API_Testing:
+  api-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - run: npm run api:tests
+      - run: npm run api-tests
