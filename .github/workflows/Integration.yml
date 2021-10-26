@@ -3,11 +3,11 @@ name: Integration
 on: [pull_request]
 
 jobs:
-  build:
+  Api_Testing:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         
       - name: "Setup Node.js"
         uses: actions/setup-node@v1
