@@ -1,6 +1,6 @@
-# Api testing with postman for the application TODOIST
+# API integration tests with postman - TODOIST
 
-This is a Test Automation Framework for the Todoist Application. It covers the API integration tests.
+It covers the API integration tests.
 
 ## Tools to Automate
 
