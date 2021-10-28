@@ -13,7 +13,7 @@ It covers the API integration tests.
 
 ### Setting up
 
-Clone the repository and run the following command in order to install the dependencies:
+Clone the repo and run the following command in order to install the dependencies:
 
 ```
 npm install
