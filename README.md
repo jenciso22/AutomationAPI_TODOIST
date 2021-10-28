@@ -1,4 +1,4 @@
-# API integration tests with postman - TODOIST
+# API integration tests with postman_TODOIST
 
 It covers the API integration tests.
 
@@ -13,7 +13,7 @@ It covers the API integration tests.
 
 ### Setting up
 
-Clone the repo and run the following command in order to install the dependencies:
+Clone the repository and run the following command in order to install the dependencies:
 
 ```
 npm install
